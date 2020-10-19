@@ -2,9 +2,7 @@
 // VAR ASSIGNMENT
 var lastNameList = ["Bianchi", "Verdi", "Rossi", "Esposito", "Conte"];
 var usersLastName;
-
-// CHECK
-console.log(lastNameList);
+var usersLastNameIndex;
 
 // ASK NAME AND PUSH INTO THE LIST
 usersLastName = prompt("Inserisci il tuo cognome:");
@@ -12,8 +10,16 @@ lastNameList.push(usersLastName);
 
 // CHECK
 console.log("Cognome utente: " + usersLastName);
-console.log(lastNameList);
 
+// SORT LAST-NAME-LIST ALPHABETICAL
+lastNameList.sort();
+
+// STAMP THE INDEX
+usersLastNameIndex = lastNameList.indexOf(usersLastName) + 1;
+
+// CHECK
+console.log(lastNameList);
+console.log("Il tuo cognome è il numero " + usersLastNameIndex + " della lista.");
 
 
 // </1-fold
