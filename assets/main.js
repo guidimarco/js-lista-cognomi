@@ -15,7 +15,7 @@ console.log("Cognome utente: " + usersLastName);
 lastNameList.sort();
 
 // 3 - EVALUATE THE INDEX
-// #2-fold --- with for-cycle and indexControl
+// #2-fold --- with for-cycle and indexControl VERS 1.0
 // usersLastNameIndex = 0;
 // // control var for evalute index
 // var indexControl = true;
@@ -31,24 +31,34 @@ lastNameList.sort();
 
 // #/2-fold
 
-// #2-fold --- with for-cycle and indexControl
-usersLastNameIndex = 0;
-// control var for evalute index
-var indexControl = true;
+// #2-fold --- with for-cycle and indexControl VERS 1.1
+// usersLastNameIndex = 0;
+// // control var for evalute index
+// var indexControl = true;
+//
+// for (var i = 0; indexControl; i++) {
+//     usersLastNameIndex = usersLastNameIndex + 1;
+//     if (usersLastName == lastNameList[i]) {
+//         indexControl = false;
+//     }
+// }
 
-for (var i = 0; i < lastNameList.length; i++) {
-    if (indexControl) {
-        usersLastNameIndex = usersLastNameIndex + 1;
-    }
-    if (usersLastName == lastNameList[i]) {
-        indexControl = false;
-    }
-}
+// #/2-fold
+
+// #2-fold --- with for-cycle and indexControl VERS 1.2
+// // control var for evalute index
+// var indexControl = true;
+//
+// for (var usersLastNameIndex = 0; indexControl; usersLastNameIndex++) {
+//     if (usersLastName == lastNameList[usersLastNameIndex]) {
+//         indexControl = false;
+//     }
+// }
 
 // #/2-fold
 
 // #2-fold --- with .indexOf
-// usersLastNameIndex = lastNameList.indexOf(usersLastName) + 1;
+usersLastNameIndex = lastNameList.indexOf(usersLastName) + 1;
 
 // #/2-fold
 
