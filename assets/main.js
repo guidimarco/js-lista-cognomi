@@ -1,23 +1,58 @@
-// <1-fold --- VERSION 1.0 ---
+// <1-fold --- VERSION 1.0
 // VAR ASSIGNMENT
 var lastNameList = ["bianchi", "verdi", "rossi", "esposito", "conte", "antognoni"];
 var usersLastName;
 var usersLastNameIndex;
 
-// ASK NAME AND PUSH INTO THE LIST
+// 1 - ASK NAME AND PUSH INTO THE LIST
 usersLastName = prompt("Inserisci il tuo cognome:").toLowerCase();
 lastNameList.push(usersLastName);
 
-// CHECK
+// stamp
 console.log("Cognome utente: " + usersLastName);
 
-// SORT LAST-NAME-LIST ALPHABETICAL
+// 2 - SORT LAST-NAME-LIST ALPHABETICALLY
 lastNameList.sort();
 
-// STAMP THE INDEX
-usersLastNameIndex = lastNameList.indexOf(usersLastName) + 1;
+// 3 - EVALUATE THE INDEX
+// #2-fold --- with for-cycle and indexControl
+// usersLastNameIndex = 0;
+// // control var for evalute index
+// var indexControl = true;
+//
+// for (var i = 0; i < lastNameList.length; i++) {
+//     if (indexControl) {
+//         usersLastNameIndex = usersLastNameIndex + 1;
+//     }
+//     if (usersLastName == lastNameList[i]) {
+//         indexControl = false;
+//     }
+// }
 
-// CHECK - STAMP - STAMP HTML
+// #/2-fold
+
+// #2-fold --- with for-cycle and indexControl
+usersLastNameIndex = 0;
+// control var for evalute index
+var indexControl = true;
+
+for (var i = 0; i < lastNameList.length; i++) {
+    if (indexControl) {
+        usersLastNameIndex = usersLastNameIndex + 1;
+    }
+    if (usersLastName == lastNameList[i]) {
+        indexControl = false;
+    }
+}
+
+// #/2-fold
+
+// #2-fold --- with .indexOf
+// usersLastNameIndex = lastNameList.indexOf(usersLastName) + 1;
+
+// #/2-fold
+
+// stamp - stamp HTML
 console.log(lastNameList);
 console.log("Il tuo cognome è il numero " + usersLastNameIndex + " della lista.");
 document.getElementById("users-last-name-index").innerHTML = usersLastNameIndex;
