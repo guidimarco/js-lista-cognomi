@@ -22,7 +22,7 @@ lastNameList.sort();
 //
 // for (var i = 0; i < lastNameList.length; i++) {
 //     if (indexControl) {
-//         usersLastNameIndex = usersLastNameIndex + 1;
+//         usersLastNameIndex++;
 //     }
 //     if (usersLastName == lastNameList[i]) {
 //         indexControl = false;
